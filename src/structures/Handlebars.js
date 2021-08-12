@@ -1,15 +1,12 @@
 const handlebars = require('handlebars')
-require('handlebars-helpers')({ handlebars })
 
 const helpers = require('../utils/Helpers.js')
 
 module.exports = class Handlebars {
   constructor () {
-    this.registerHelpers()
-  }
+    Object.assign(this, handlebars)
 
-  compile (template) {
-    return handlebars.compile(template)
+    this.registerHelpers()
   }
 
   registerHelpers () {
