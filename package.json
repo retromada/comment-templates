@@ -3,7 +3,8 @@
   "version": "0.1.0",
   "main": "./src/index.js",
   "scripts": {
-    "template": "node ./src/utils/CreateTemplate.js",
+    "template:create": "node src/utils/CreateTemplate.js",
+    "template:update": "sh src/templates/update.sh",
     "test": "node retromada.test.js"
   },
   "repository": {
