@@ -2,6 +2,11 @@
 # yarn lockfile v1
 
 
+"@retromada/prototype@^0.0.3":
+  version "0.0.3"
+  resolved "https://npm.pkg.github.com/download/@retromada/prototype/0.0.3/bb21bb892c3b38ad5083ee3748baa475f371d89be287c3d64e9fe7916838a199#518d3ddbd7427fec46426f01e3fc27c31495f2f4"
+  integrity sha512-j57bYYFigkz/U5VPRFl2cU2wQkYXDW72JhDaUEDIxnIze40UxrN8fnmHZHfJXXRyPkF94XZ5mgtRyqBv0lXwxg==
+
 handlebars@^4.7.7:
   version "4.7.7"
   resolved "https://registry.yarnpkg.com/handlebars/-/handlebars-4.7.7.tgz#9ce33416aad02dbd6c8fafa8240d5d98004945a1"
