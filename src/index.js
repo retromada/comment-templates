@@ -1,6 +1,8 @@
 const { readdirSync } = require('fs')
 const { parse, resolve } = require('path')
 
+const Handlerbars = require('./structures/Handlebars.js')
+
 const templatesPath = resolve(__dirname, 'templates')
 const Templates = Object.assign(
   {},
@@ -27,4 +29,4 @@ Templates.toObject = () =>
       }))
   )
 
-module.exports = { Templates }
+module.exports = { Handlerbars, Templates }
