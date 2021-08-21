@@ -28,7 +28,7 @@ module.exports = class Utils {
     }
 
     if (options?.random) formats = formats.shuffle()
-    if (options?.unique) formats = formats.random()
+    if (options?.unique) formats = [formats.random()]
 
     for (let index = 0; index < formats.length; index++) {
       const [initialize, terminate] = formatTags(formats[index])
