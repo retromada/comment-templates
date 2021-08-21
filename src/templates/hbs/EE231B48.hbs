@@ -1,3 +1,3 @@
 | {{join (slice unicode.emojis 0 3) ' | '}} |
-| {{join (slice unicode.emojis 3 6) ' | '}} | {{text}}
+| {{join (slice unicode.emojis 3 6) ' | '}} | {{formattedText text (array 'bold' 'italic' 'underline' 'none') (JSONparse '{"unique": true }')}}
 | {{join (slice unicode.emojis 6 9) ' | '}} |
