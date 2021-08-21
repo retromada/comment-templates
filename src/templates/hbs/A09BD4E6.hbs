@@ -1,6 +1,6 @@
 {{! @note: Not functional for short texts }}
 | {{join (slice unicode.emojis 0 18) ''}} |
 
-{{formattedText (join (slicingText text (array 6 8)) '\n') (array 'bold' 'italic' 'underline' 'none') (JSONparse '{"unique": true }')}}
+{{formattedText (join (slicingText text (array 6 8)) '\n') (array 'bold' 'italic' 'underline' 'none') (JSONparse '{"unique": true}')}}
 
 | {{join (slice unicode.emojis 18 36) ''}} |
