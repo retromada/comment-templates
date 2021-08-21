@@ -1,3 +1,5 @@
+const { TextFormats } = require('./Constants.js')
+
 module.exports = class Utils {
   /**
    * Text Formatting Options
@@ -10,13 +12,15 @@ module.exports = class Utils {
   /**
    * Add formatting to text
    * @param {string} text Text to be formatted
-   * @param {string[]} format Formats to be applied to text
-   * @param {FormatTextOptions} options Options for text formatting
+   * @param {string|string[]} formats Formats to be applied to text
+   * @param {FormatTextOptions} [options] Options for text formatting
    * @returns {string}
    */
   static formattedText (text, formats, options) {
+    if (!Array.isArray(formats)) formats = [formats]
+
     const formatTags = (format) => {
-      if (format === 'none') return Array(2).fill('')
+      if (format === TextFormats.NONE) return Array(2).fill('')
 
       const firstLetter = format.match(/^[^\*]/).shift()
 
@@ -24,7 +28,7 @@ module.exports = class Utils {
     }
 
     if (options?.random) formats = formats.shuffle()
-    if (options?.unique) formats = [formats.random()]
+    if (options?.unique) formats = formats.random()
 
     for (let index = 0; index < formats.length; index++) {
       const [initialize, terminate] = formatTags(formats[index])
